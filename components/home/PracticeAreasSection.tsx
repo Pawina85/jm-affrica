@@ -96,9 +96,14 @@ const PRACTICE_AREAS = [
   },
 ];
 
+const INITIAL_COUNT = 6;
+
 export default function PracticeAreasSection() {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleAreas = showAll ? PRACTICE_AREAS : PRACTICE_AREAS.slice(0, INITIAL_COUNT);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -129,7 +134,7 @@ export default function PracticeAreasSection() {
 
         {/* ── Card grid ── */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {PRACTICE_AREAS.map((area, i) => (
+          {visibleAreas.map((area, i) => (
             <a
               key={area.slug}
               href={`/practice-areas/${area.slug}`}
@@ -180,6 +185,31 @@ export default function PracticeAreasSection() {
             </a>
           ))}
         </div>
+
+        {/* ── See More / See Less ── */}
+        {PRACTICE_AREAS.length > INITIAL_COUNT && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 bg-gold px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[3px] text-navy transition-colors duration-300 hover:bg-gold-light"
+            >
+              {showAll ? "Show Less" : `See All ${PRACTICE_AREAS.length} Practice Areas`}
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-transform duration-300 ${showAll ? "rotate-180" : ""}`}
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
