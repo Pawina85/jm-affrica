@@ -67,7 +67,7 @@ export default function TeamSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={sectionRef} id="our-team" className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-16 max-w-2xl">
