@@ -166,7 +166,7 @@ export default function PracticeAreasSection() {
                 </p>
 
                 {/* Arrow */}
-                <div className="mt-4 flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[3px] text-gold opacity-0 transition-all duration-300 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="mt-4 flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[3px] text-gold transition-colors duration-300 group-hover:text-gold-light">
                   Learn More
                   <svg
                     width="12"
