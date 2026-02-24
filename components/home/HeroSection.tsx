@@ -54,7 +54,7 @@ export default function HeroSection() {
           </p>
 
           <h1
-            className={`font-display text-[clamp(42px,5.5vw,82px)] font-light leading-[1.05] text-cream transition-all duration-700 delay-200 ${
+            className={`text-[clamp(42px,5.5vw,72px)] font-medium leading-[1.1] tracking-tight text-cream transition-all duration-700 delay-200 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-5 opacity-0"
@@ -63,7 +63,7 @@ export default function HeroSection() {
             Leading the
             <br />
             Way in{" "}
-            <em className="font-display italic text-gold">
+            <em className="text-gold">
               Legal
               <br />
               Excellence
@@ -151,7 +151,7 @@ export default function HeroSection() {
 
             {/* Caption inside photo card — bottom */}
             <div className="absolute inset-x-0 bottom-0 z-10 p-6">
-              <p className="font-display text-[22px] italic font-light text-cream">
+              <p className="text-[18px] font-medium text-cream">
                 {current.name}
               </p>
               <p className="mt-1 text-[9px] font-medium uppercase tracking-[4px] text-gold">
@@ -255,7 +255,7 @@ export default function HeroSection() {
 
           {/* Caption inside photo — mobile */}
           <div className="absolute inset-x-0 bottom-0 z-10 p-5">
-            <p className="font-display text-[20px] italic font-light text-cream drop-shadow-md">
+            <p className="text-[17px] font-medium text-cream drop-shadow-md">
               {current.name}
             </p>
             <p className="mt-1 text-[9px] font-semibold uppercase tracking-[4px] text-gold">

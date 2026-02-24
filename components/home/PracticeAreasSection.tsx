@@ -117,9 +117,9 @@ export default function PracticeAreasSection() {
         {/* ── Header ── */}
         <div className="mb-16">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[6px] text-gold">Practice Areas</p>
-          <h2 className="font-display text-[clamp(48px,6vw,80px)] font-light leading-[1.05] text-charcoal">
+          <h2 className="text-[clamp(40px,5.5vw,64px)] font-medium leading-[1.1] tracking-tight text-charcoal">
             Comprehensive Legal Counsel{" "}
-            <em className="font-display italic text-gold">You Can Trust</em>
+            <em className="text-gold">You Can Trust</em>
           </h2>
           <p className="mt-6 max-w-xl text-[14px] font-light leading-[1.85] text-text-mid">
             From criminal defence to crypto regulation — 15 areas of focused
@@ -153,7 +153,7 @@ export default function PracticeAreasSection() {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-display text-[19px] font-normal text-gold">
+                <h3 className="text-[16px] font-semibold text-gold">
                   {area.name}
                 </h3>
                 <p className="mt-2 text-[13px] font-light leading-[1.85] text-cream/80">

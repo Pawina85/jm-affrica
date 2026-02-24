@@ -52,9 +52,9 @@ export default function TeamSection() {
         {/* ── Header ── */}
         <div className="mb-16 max-w-2xl">
           <p className="eyebrow mb-4">Our Team</p>
-          <h2 className="font-display text-[clamp(36px,4vw,56px)] font-light leading-[1.1] text-cream">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-medium leading-[1.15] tracking-tight text-cream">
             The Counsel Behind{" "}
-            <em className="font-display italic text-gold">Your Case</em>
+            <em className="text-gold">Your Case</em>
           </h2>
           <p className="mt-6 max-w-lg text-[14px] font-light leading-[1.85] text-text-light">
             Six specialists across criminal, commercial, family, and property
@@ -87,7 +87,7 @@ export default function TeamSection() {
 
               {/* Hover overlay — dark with bio */}
               <div className="absolute inset-0 z-10 flex flex-col justify-end bg-navy/80 p-5 opacity-0 transition-opacity duration-400 group-hover:opacity-100">
-                <p className="font-display text-[20px] italic font-light text-cream">
+                <p className="text-[16px] font-medium text-cream">
                   {lawyer.name}
                 </p>
                 <p className="mt-1 text-[9px] font-semibold uppercase tracking-[3px] text-gold">
@@ -100,7 +100,7 @@ export default function TeamSection() {
 
               {/* Default caption */}
               <div className="absolute inset-x-0 bottom-0 z-10 p-5 transition-opacity duration-400 group-hover:opacity-0">
-                <p className="font-display text-[20px] italic font-light text-cream">
+                <p className="text-[16px] font-medium text-cream">
                   {lawyer.name}
                 </p>
                 <p className="mt-1 text-[9px] font-semibold uppercase tracking-[3px] text-gold">
@@ -127,7 +127,7 @@ export default function TeamSection() {
               }}
             >
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                <p className="font-display text-[22px] italic font-light text-cream transition-colors duration-300 group-hover/row:text-gold">
+                <p className="text-[18px] font-medium text-cream transition-colors duration-300 group-hover/row:text-gold">
                   {lawyer.name}
                 </p>
                 <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
