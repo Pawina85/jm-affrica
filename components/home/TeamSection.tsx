@@ -8,24 +8,27 @@ const PHOTO_LAWYERS = [
   {
     name: "Advocate J. Mokoena",
     specialisation: "Criminal Law · Litigation · Constitutional",
+    bio: "Founding partner with 27+ years defending clients in high-profile criminal and constitutional matters across South Africa.",
     img: "https://i.pravatar.cc/600?img=68",
   },
   {
     name: "Ms. A. Dlamini",
     specialisation: "Family Law · Labour Law",
+    bio: "Senior associate specialising in complex divorce, custody disputes, and employment law for individuals and corporates.",
     img: "https://i.pravatar.cc/600?img=47",
   },
   {
     name: "Mr. T. van Wyk",
     specialisation: "Conveyancing · Property",
+    bio: "Registered conveyancer handling residential and commercial property transfers, bond registrations, and sectional title work.",
     img: "https://i.pravatar.cc/600?img=53",
   },
 ];
 
 const NAME_LAWYERS = [
-  { name: "Ms. N. Khumalo", specialisation: "Commercial · Corporate Law" },
-  { name: "Mr. R. Pillay", specialisation: "Wills · Estates · Trusts" },
-  { name: "Adv. S. Botha", specialisation: "Road Accident Fund" },
+  { name: "Ms. N. Khumalo", specialisation: "Commercial · Corporate Law", bio: "Advising businesses on mergers, compliance, and corporate governance." },
+  { name: "Mr. R. Pillay", specialisation: "Wills · Estates · Trusts", bio: "Drafting wills, administering estates, and structuring family trusts." },
+  { name: "Adv. S. Botha", specialisation: "Road Accident Fund", bio: "Securing maximum RAF compensation for accident victims across SA." },
 ];
 
 export default function TeamSection() {
@@ -80,10 +83,23 @@ export default function TeamSection() {
               />
               {/* Overlays */}
               <div className="absolute inset-0 bg-navy/30 mix-blend-multiply" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent transition-opacity duration-400 group-hover:opacity-0" />
 
-              {/* Caption */}
-              <div className="absolute inset-x-0 bottom-0 z-10 p-5 transition-transform duration-400 group-hover:translate-y-[-4px]">
+              {/* Hover overlay — dark with bio */}
+              <div className="absolute inset-0 z-10 flex flex-col justify-end bg-navy/80 p-5 opacity-0 transition-opacity duration-400 group-hover:opacity-100">
+                <p className="font-display text-[20px] italic font-light text-cream">
+                  {lawyer.name}
+                </p>
+                <p className="mt-1 text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                  {lawyer.specialisation}
+                </p>
+                <p className="mt-3 text-[12px] font-light leading-[1.7] text-cream/70">
+                  {lawyer.bio}
+                </p>
+              </div>
+
+              {/* Default caption */}
+              <div className="absolute inset-x-0 bottom-0 z-10 p-5 transition-opacity duration-400 group-hover:opacity-0">
                 <p className="font-display text-[20px] italic font-light text-cream">
                   {lawyer.name}
                 </p>
@@ -100,7 +116,7 @@ export default function TeamSection() {
           {NAME_LAWYERS.map((lawyer, i) => (
             <div
               key={lawyer.name}
-              className={`flex flex-col gap-1 py-5 sm:flex-row sm:items-center sm:justify-between transition-all duration-700 ${
+              className={`group/row cursor-default py-5 transition-all duration-700 ${
                 isVisible
                   ? "translate-x-0 opacity-100"
                   : "-translate-x-[70px] opacity-0"
@@ -110,11 +126,16 @@ export default function TeamSection() {
                 transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
               }}
             >
-              <p className="font-display text-[22px] italic font-light text-cream">
-                {lawyer.name}
-              </p>
-              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
-                {lawyer.specialisation}
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                <p className="font-display text-[22px] italic font-light text-cream transition-colors duration-300 group-hover/row:text-gold">
+                  {lawyer.name}
+                </p>
+                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                  {lawyer.specialisation}
+                </p>
+              </div>
+              <p className="mt-2 max-h-0 overflow-hidden text-[12px] font-light leading-[1.7] text-text-light opacity-0 transition-all duration-300 group-hover/row:max-h-20 group-hover/row:opacity-100">
+                {lawyer.bio}
               </p>
             </div>
           ))}
