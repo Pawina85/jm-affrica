@@ -8,91 +8,91 @@ const PRACTICE_AREAS = [
     name: "Criminal Law",
     slug: "criminal-law",
     desc: "Defence in fraud, assault, theft, drug offences, bail applications, and high-profile criminal trials.",
-    img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Litigation",
     slug: "litigation",
     desc: "Civil and commercial dispute resolution — from High Court trials to arbitration and mediation.",
-    img: "https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Family & Labour Law",
     slug: "family-labour-law",
     desc: "Divorce, custody, maintenance, CCMA disputes, unfair dismissals, and employment contracts.",
-    img: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Conveyancing",
     slug: "conveyancing",
     desc: "Property transfers, bond registrations, sectional title, and commercial real estate transactions.",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Wills, Estates & Trusts",
     slug: "wills-estates-trusts",
     desc: "Drafting wills, estate administration, trust formation, and succession planning.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Notarial Law",
     slug: "notarial-law",
     desc: "Notarial bonds, ante-nuptial contracts, authentication of documents, and sworn translations.",
-    img: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Contractual Law",
     slug: "contractual-law",
     desc: "Drafting, reviewing, and enforcing commercial and personal contracts across all sectors.",
-    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Commercial & Corporate",
     slug: "commercial-corporate-law",
     desc: "Company formations, M&A advisory, shareholder agreements, and corporate governance.",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Insolvency & Business Rescue",
     slug: "insolvency-business-rescue",
     desc: "Sequestration, liquidation, business rescue plans, and creditor negotiations.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Road Accident Fund",
     slug: "road-accident-fund",
     desc: "RAF claims for personal injury, loss of income, and medical negligence compensation.",
-    img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Private Investigation",
     slug: "private-investigation",
     desc: "Surveillance, background checks, asset tracing, and evidence gathering for legal proceedings.",
-    img: "https://images.unsplash.com/photo-1557862921-37829c790f19?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Forensic Investigation",
     slug: "forensic-investigation",
     desc: "Corporate fraud detection, forensic audits, digital forensics, and whistleblower investigations.",
-    img: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Insurance Law",
     slug: "insurance-law",
     desc: "Policy disputes, rejected claims, insurance litigation, and regulatory advisory.",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "SARS & Tax Matters",
     slug: "sars-tax-matters",
     desc: "Tax disputes, SARS audits, voluntary disclosure, and tax structuring advice.",
-    img: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=600&h=400&fit=crop&q=80",
   },
   {
     name: "Crypto & Digital Assets",
     slug: "crypto-digital-assets",
     desc: "Regulatory compliance, token disputes, exchange agreements, and digital asset recovery.",
-    img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&q=80",
   },
 ];
 
@@ -115,12 +115,16 @@ export default function PracticeAreasSection() {
     <section ref={ref} id="practice-areas" className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
-        <div className="mb-16 max-w-2xl">
-          <p className="eyebrow mb-4">Practice Areas</p>
-          <h2 className="font-display text-[clamp(36px,4vw,56px)] font-light leading-[1.1] text-charcoal">
+        <div className="mb-16">
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[6px] text-gold">Practice Areas</p>
+          <h2 className="font-display text-[clamp(48px,6vw,80px)] font-light leading-[1.05] text-charcoal">
             Comprehensive Legal Counsel{" "}
             <em className="font-display italic text-gold">You Can Trust</em>
           </h2>
+          <p className="mt-6 max-w-xl text-[14px] font-light leading-[1.85] text-text-mid">
+            From criminal defence to crypto regulation — 15 areas of focused
+            expertise, each backed by decades of real courtroom experience.
+          </p>
         </div>
 
         {/* ── Card grid ── */}
@@ -142,18 +146,17 @@ export default function PracticeAreasSection() {
                   src={area.img}
                   alt={area.name}
                   fill
-                  className="object-cover grayscale transition-all duration-700 group-hover:scale-[1.04] group-hover:grayscale-0"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-navy/40 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0" />
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-display text-[19px] font-normal text-cream transition-colors duration-300 group-hover:text-gold">
+                <h3 className="font-display text-[19px] font-normal text-gold">
                   {area.name}
                 </h3>
-                <p className="mt-2 text-[12px] font-light leading-[1.75] text-text-light">
+                <p className="mt-2 text-[13px] font-light leading-[1.85] text-cream/80">
                   {area.desc}
                 </p>
 
