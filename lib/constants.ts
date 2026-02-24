@@ -82,8 +82,7 @@ export const NAV_ITEMS: NavItem[] = [
     dropdown: {
       type: "generic",
       items: [
-        { label: "About Us", href: "/about" },
-        { label: "Our Team", href: "/about#team" },
+        { label: "Our Team", href: "/#our-team" },
         { label: "Contact Us", href: "/contact" },
       ],
     },
@@ -99,8 +98,7 @@ export const FOOTER_RESOURCES = [
 ];
 
 export const FOOTER_FIRM = [
-  { label: "About Us", href: "/about" },
-  { label: "Our Team", href: "/about#team" },
+  { label: "Our Team", href: "/#our-team" },
   { label: "Articles", href: "/articles" },
   { label: "Contact", href: "/contact" },
 ];

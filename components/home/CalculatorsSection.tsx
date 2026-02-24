@@ -141,11 +141,12 @@ function SliderInput({
   format?: (v: number) => string;
 }) {
   const display = format ? `${prefix || ""}${format(value)}${suffix || ""}` : `${prefix || ""}${value}${suffix || ""}`;
+  const percent = ((value - min) / (max - min)) * 100;
   return (
-    <div>
+    <div className="border-b border-border/60 pb-5">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[12px] font-medium text-text-mid">{label}</span>
-        <span className="text-[14px] font-semibold text-charcoal">{display}</span>
+        <span className="text-[13px] font-semibold text-charcoal">{label}</span>
+        <span className="text-[16px] font-bold text-gold">{display}</span>
       </div>
       <input
         type="range"
@@ -154,11 +155,12 @@ function SliderInput({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-gold h-1.5 cursor-pointer appearance-none rounded-full bg-border [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-md"
+        style={{ background: `linear-gradient(to right, #B8962E ${percent}%, #E4DDD4 ${percent}%)` }}
+        className="w-full h-1.5 cursor-pointer appearance-none rounded-full [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-md"
       />
       <div className="flex justify-between mt-1">
-        <span className="text-[10px] text-text-light">{prefix || ""}{format ? format(min) : min}{suffix || ""}</span>
-        <span className="text-[10px] text-text-light">{prefix || ""}{format ? format(max) : max}{suffix || ""}</span>
+        <span className="text-[11px] text-text-mid">{prefix || ""}{format ? format(min) : min}{suffix || ""}</span>
+        <span className="text-[11px] text-text-mid">{prefix || ""}{format ? format(max) : max}{suffix || ""}</span>
       </div>
     </div>
   );
@@ -168,9 +170,9 @@ function ResultsGrid({ items }: { items: { label: string; value: string; highlig
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
       {items.map((item) => (
-        <div key={item.label} className={`rounded border p-4 text-center ${item.highlight ? "border-gold/30 bg-gold/5" : "border-border bg-white"}`}>
-          <p className="text-[10px] font-semibold uppercase tracking-[2px] text-text-mid">{item.label}</p>
-          <p className={`mt-1 text-[20px] font-semibold ${item.highlight ? "text-gold" : "text-charcoal"}`}>{item.value}</p>
+        <div key={item.label} className={`rounded border p-5 text-center ${item.highlight ? "border-gold/40 bg-gold/10" : "border-gold/20 bg-gold/5"}`}>
+          <p className="text-[11px] font-semibold uppercase tracking-[2px] text-charcoal">{item.label}</p>
+          <p className={`mt-2 text-[24px] font-bold ${item.highlight ? "text-gold" : "text-charcoal"}`}>{item.value}</p>
         </div>
       ))}
     </div>
@@ -229,7 +231,7 @@ export default function CalculatorsSection() {
   };
 
   return (
-    <section ref={ref} className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="calculators" className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-14 max-w-xl">

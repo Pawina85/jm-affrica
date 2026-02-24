@@ -177,44 +177,38 @@ export default function HeroSection() {
           </div>
 
           {/* ── Credentials strip ── */}
-          <div className="mt-6 w-[82%] max-w-[470px]">
+          <div className="mt-8 w-[82%] max-w-[470px]">
             {/* Lead statement */}
-            <p className="text-center text-[13px] font-light leading-relaxed text-text-light">
+            <p className="text-center text-[16px] font-medium leading-relaxed text-charcoal">
               Over{" "}
-              <span className="font-semibold text-gold">95% success rate</span>{" "}
+              <span className="font-bold text-gold">95% success rate</span>{" "}
               across criminal and civil matters.
             </p>
 
-            {/* Stat row — stacked & centered */}
-            <div className="mt-5 flex items-start justify-center gap-8">
+            {/* Stat row — big & proud */}
+            <div className="mt-6 flex items-center justify-center gap-8">
               <div className="text-center">
-                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
-                  Experience
-                </p>
-                <p className="mt-1 text-[13px] font-light text-charcoal">
-                  27+ Years
+                <p className="text-[28px] font-bold text-gold">27+</p>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[3px] text-text-mid">
+                  Years
                 </p>
               </div>
 
-              <div className="h-8 w-px bg-border" />
+              <div className="h-12 w-px bg-gold/20" />
 
               <div className="text-center">
-                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                <p className="text-[28px] font-bold text-gold">3,000+</p>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[3px] text-text-mid">
                   Clients
                 </p>
-                <p className="mt-1 text-[13px] font-light text-charcoal">
-                  3,000+
-                </p>
               </div>
 
-              <div className="h-8 w-px bg-border" />
+              <div className="h-12 w-px bg-gold/20" />
 
               <div className="text-center">
-                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
-                  Cases
-                </p>
-                <p className="mt-1 text-[13px] font-light text-charcoal">
-                  3,000+
+                <p className="text-[28px] font-bold text-gold">3,000+</p>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[3px] text-text-mid">
+                  Cases Won
                 </p>
               </div>
             </div>
@@ -281,41 +275,35 @@ export default function HeroSection() {
 
         {/* ── Credentials strip mobile ── */}
         <div className="px-8 pb-10">
-          <p className="text-center text-[13px] font-light leading-relaxed text-text-mid">
+          <p className="text-center text-[16px] font-medium leading-relaxed text-charcoal">
             Over{" "}
-            <span className="font-semibold text-gold">95% success rate</span>{" "}
+            <span className="font-bold text-gold">95% success rate</span>{" "}
             across criminal and civil matters.
           </p>
 
-          <div className="mt-5 flex items-start justify-center gap-6">
+          <div className="mt-6 flex items-center justify-center gap-6">
             <div className="text-center">
-              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
-                Experience
-              </p>
-              <p className="mt-1 text-[13px] font-light text-charcoal">
-                27+ Years
+              <p className="text-[26px] font-bold text-gold">27+</p>
+              <p className="mt-1 text-[10px] font-semibold uppercase tracking-[3px] text-text-mid">
+                Years
               </p>
             </div>
 
-            <div className="h-8 w-px bg-border" />
+            <div className="h-12 w-px bg-gold/20" />
 
             <div className="text-center">
-              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+              <p className="text-[26px] font-bold text-gold">3,000+</p>
+              <p className="mt-1 text-[10px] font-semibold uppercase tracking-[3px] text-text-mid">
                 Clients
               </p>
-              <p className="mt-1 text-[13px] font-light text-charcoal">
-                3,000+
-              </p>
             </div>
 
-            <div className="h-8 w-px bg-border" />
+            <div className="h-12 w-px bg-gold/20" />
 
             <div className="text-center">
-              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
-                Cases
-              </p>
-              <p className="mt-1 text-[13px] font-light text-charcoal">
-                3,000+
+              <p className="text-[26px] font-bold text-gold">3,000+</p>
+              <p className="mt-1 text-[10px] font-semibold uppercase tracking-[3px] text-text-mid">
+                Cases Won
               </p>
             </div>
           </div>

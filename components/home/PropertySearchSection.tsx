@@ -42,7 +42,7 @@ export default function PropertySearchSection() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="search" className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-14 max-w-2xl">
@@ -106,7 +106,7 @@ export default function PropertySearchSection() {
 
                 {/* Order button */}
                 <div className="mt-4">
-                  <span className="inline-flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[3px] text-gold opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  <span className="inline-flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[3px] text-gold transition-colors duration-300 group-hover:text-gold-light">
                     Order Now
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7" />
