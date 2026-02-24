@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const LAWYERS = [
-  { name: "Advocate J. Mokoena", role: "Founding Partner", number: "01", img: "https://i.pravatar.cc/600?img=68" },
-  { name: "Ms. A. Dlamini", role: "Senior Associate", number: "02", img: "https://i.pravatar.cc/600?img=47" },
-  { name: "Mr. T. van Wyk", role: "Conveyancer", number: "03", img: "https://i.pravatar.cc/600?img=53" },
-  { name: "Ms. N. Khumalo", role: "Associate", number: "04", img: "https://i.pravatar.cc/600?img=45" },
-  { name: "Mr. R. Pillay", role: "Associate", number: "05", img: "https://i.pravatar.cc/600?img=51" },
-  { name: "Adv. S. Botha", role: "Associate", number: "06", img: "https://i.pravatar.cc/600?img=60" },
+  { name: "Advocate J. Mokoena", specialisation: "Criminal Law · Litigation", img: "https://i.pravatar.cc/600?img=68" },
+  { name: "Ms. A. Dlamini", specialisation: "Family Law · Labour Law", img: "https://i.pravatar.cc/600?img=47" },
+  { name: "Mr. T. van Wyk", specialisation: "Conveyancing · Property", img: "https://i.pravatar.cc/600?img=53" },
+  { name: "Ms. N. Khumalo", specialisation: "Commercial · Corporate Law", img: "https://i.pravatar.cc/600?img=45" },
+  { name: "Mr. R. Pillay", specialisation: "Wills · Estates · Trusts", img: "https://i.pravatar.cc/600?img=51" },
+  { name: "Adv. S. Botha", specialisation: "Road Accident Fund", img: "https://i.pravatar.cc/600?img=60" },
 ];
 
 export default function HeroSection() {
@@ -117,49 +117,50 @@ export default function HeroSection() {
         </div>
 
         {/* ── Right: Lawyer rotation ── */}
-        <div className="relative hidden lg:flex lg:items-center lg:justify-center">
-          {/* Placeholder photo area with crossfade */}
-          <div className="relative h-[70vh] w-[85%] max-w-[480px] overflow-hidden">
+        <div className="relative hidden pt-24 pb-12 lg:flex lg:flex-col lg:items-center lg:justify-center">
+          {/* Eyebrow above photo card */}
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[5px] text-gold">
+            Meet Our Attorneys
+          </p>
+
+          {/* Photo card */}
+          <div className="relative h-[58vh] w-[82%] max-w-[470px] overflow-hidden border border-gold/15 bg-navy">
             {LAWYERS.map((lawyer, i) => (
               <div
-                key={lawyer.number}
+                key={i}
                 className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out ${
                   i === activeIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
-                {/* Lawyer photo — grayscale + duotone */}
                 <Image
                   src={lawyer.img}
                   alt={lawyer.name}
                   fill
-                  className="object-cover object-top grayscale"
-                  sizes="480px"
+                  className="object-cover object-[center_15%] contrast-[1.1] grayscale"
+                  sizes="470px"
                   priority={i === 0}
                 />
-                {/* Dark overlay gradient for text legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
-                {/* Subtle navy duotone tint */}
-                <div className="absolute inset-0 bg-navy/20 mix-blend-multiply" />
+                {/* Strong navy duotone overlay — dark & authoritative */}
+                <div className="absolute inset-0 bg-navy/35 mix-blend-multiply" />
+                {/* Top vignette */}
+                <div className="absolute inset-0 bg-gradient-to-b from-navy/30 via-transparent to-transparent" />
+                {/* Bottom gradient — heavy, for caption legibility */}
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-navy via-navy/70 to-transparent" />
               </div>
             ))}
 
-            {/* Lawyer name overlay */}
-            <div className="absolute inset-x-0 bottom-0 z-10 p-8">
-              <div className="border-l-2 border-gold pl-4">
-                <p className="text-[10px] font-medium uppercase tracking-[4px] text-gold">
-                  {current.number} / 06
-                </p>
-                <p className="mt-1 font-display text-[24px] font-light text-cream">
-                  {current.name}
-                </p>
-                <p className="text-[12px] font-light tracking-wide text-cream/60">
-                  {current.role}
-                </p>
-              </div>
+            {/* Caption inside photo card — bottom */}
+            <div className="absolute inset-x-0 bottom-0 z-10 p-6">
+              <p className="font-display text-[22px] italic font-light text-cream">
+                {current.name}
+              </p>
+              <p className="mt-1 text-[9px] font-medium uppercase tracking-[4px] text-gold">
+                {current.specialisation}
+              </p>
             </div>
 
             {/* Progress dots */}
-            <div className="absolute bottom-8 right-8 z-10 flex gap-2">
+            <div className="absolute bottom-6 right-6 z-10 flex gap-2">
               {LAWYERS.map((_, i) => (
                 <button
                   key={i}
@@ -174,16 +175,66 @@ export default function HeroSection() {
               ))}
             </div>
           </div>
+
+          {/* ── Credentials strip ── */}
+          <div className="mt-6 w-[82%] max-w-[470px]">
+            {/* Lead statement */}
+            <p className="text-center text-[13px] font-light leading-relaxed text-text-light">
+              Over{" "}
+              <span className="font-semibold text-gold">95% success rate</span>{" "}
+              across criminal and civil matters.
+            </p>
+
+            {/* Stat row — stacked & centered */}
+            <div className="mt-5 flex items-start justify-center gap-8">
+              <div className="text-center">
+                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                  Experience
+                </p>
+                <p className="mt-1 text-[13px] font-light text-charcoal">
+                  27+ Years
+                </p>
+              </div>
+
+              <div className="h-8 w-px bg-border" />
+
+              <div className="text-center">
+                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                  Clients
+                </p>
+                <p className="mt-1 text-[13px] font-light text-charcoal">
+                  3,000+
+                </p>
+              </div>
+
+              <div className="h-8 w-px bg-border" />
+
+              <div className="text-center">
+                <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                  Cases
+                </p>
+                <p className="mt-1 text-[13px] font-light text-charcoal">
+                  3,000+
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* ── Mobile: Lawyer photo + info ── */}
       <div className="relative z-10 bg-cream-dark lg:hidden">
+        {/* Eyebrow mobile */}
+        <div className="px-8 pt-10 pb-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[5px] text-gold">
+            Meet Our Attorneys
+          </p>
+        </div>
         {/* Mobile photo */}
-        <div className="relative h-[50vh] w-full overflow-hidden">
+        <div className="relative mx-8 h-[55vh] overflow-hidden border border-gold/15 bg-navy">
           {LAWYERS.map((lawyer, i) => (
             <div
-              key={lawyer.number}
+              key={i}
               className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out ${
                 i === activeIndex ? "opacity-100" : "opacity-0"
               }`}
@@ -192,43 +243,80 @@ export default function HeroSection() {
                 src={lawyer.img}
                 alt={lawyer.name}
                 fill
-                className="object-cover object-top grayscale"
+                className="object-cover object-[center_15%] contrast-[1.1] grayscale"
                 sizes="100vw"
                 priority={i === 0}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cream-dark via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-navy/10 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-navy/35 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-b from-navy/30 via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-navy via-navy/70 to-transparent" />
             </div>
           ))}
+
+          {/* Caption inside photo — mobile */}
+          <div className="absolute inset-x-0 bottom-0 z-10 p-5">
+            <p className="font-display text-[20px] italic font-light text-cream drop-shadow-md">
+              {current.name}
+            </p>
+            <p className="mt-1 text-[9px] font-semibold uppercase tracking-[4px] text-gold">
+              {current.specialisation}
+            </p>
+          </div>
         </div>
-        {/* Mobile info */}
-        <div className="px-8 pb-12 pt-4">
-          <div className="mx-auto max-w-md">
-            <div className="border-l-2 border-gold pl-4">
-              <p className="text-[10px] font-medium uppercase tracking-[4px] text-gold">
-                {current.number} / 06
+        {/* Progress dots mobile */}
+        <div className="flex gap-2 px-8 pt-5 pb-6">
+          {LAWYERS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === activeIndex
+                  ? "w-6 bg-gold"
+                  : "w-1.5 bg-navy/20 hover:bg-navy/40"
+              }`}
+              aria-label={`View lawyer ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* ── Credentials strip mobile ── */}
+        <div className="px-8 pb-10">
+          <p className="text-center text-[13px] font-light leading-relaxed text-text-mid">
+            Over{" "}
+            <span className="font-semibold text-gold">95% success rate</span>{" "}
+            across criminal and civil matters.
+          </p>
+
+          <div className="mt-5 flex items-start justify-center gap-6">
+            <div className="text-center">
+              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                Experience
               </p>
-              <p className="mt-1 font-display text-[24px] font-light text-charcoal">
-                {current.name}
-              </p>
-              <p className="text-[12px] font-light tracking-wide text-text-mid">
-                {current.role}
+              <p className="mt-1 text-[13px] font-light text-charcoal">
+                27+ Years
               </p>
             </div>
-            {/* Progress dots mobile */}
-            <div className="mt-6 flex gap-2">
-              {LAWYERS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-500 ${
-                    i === activeIndex
-                      ? "w-6 bg-gold"
-                      : "w-1.5 bg-navy/20 hover:bg-navy/40"
-                  }`}
-                  aria-label={`View lawyer ${i + 1}`}
-                />
-              ))}
+
+            <div className="h-8 w-px bg-border" />
+
+            <div className="text-center">
+              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                Clients
+              </p>
+              <p className="mt-1 text-[13px] font-light text-charcoal">
+                3,000+
+              </p>
+            </div>
+
+            <div className="h-8 w-px bg-border" />
+
+            <div className="text-center">
+              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-gold">
+                Cases
+              </p>
+              <p className="mt-1 text-[13px] font-light text-charcoal">
+                3,000+
+              </p>
             </div>
           </div>
         </div>
