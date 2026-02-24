@@ -32,17 +32,17 @@ export default function HeroSection() {
   const current = LAWYERS[activeIndex];
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
-      {/* ── Split background ── */}
-      <div className="absolute inset-0 flex">
+    <section className="relative w-full overflow-hidden lg:min-h-screen">
+      {/* ── Split background (desktop only) ── */}
+      <div className="absolute inset-0 hidden lg:flex">
         <div className="w-1/2 bg-navy" />
         <div className="w-1/2 bg-cream-dark" />
       </div>
 
       {/* ── Content grid ── */}
-      <div className="relative z-10 mx-auto grid min-h-screen max-w-[1400px] grid-cols-1 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 lg:min-h-screen lg:grid-cols-2">
         {/* ── Left: Text ── */}
-        <div className="flex flex-col justify-center px-8 py-24 sm:px-12 lg:px-16 xl:px-24">
+        <div className="flex flex-col justify-center bg-navy px-8 pt-28 pb-16 sm:px-12 lg:bg-transparent lg:py-24 lg:px-16 xl:px-24">
           <p
             className={`eyebrow mb-6 transition-all duration-700 ${
               isVisible
@@ -109,7 +109,7 @@ export default function HeroSection() {
             </a>
             <a
               href="#practice-areas"
-              className="inline-flex items-center gap-2 border border-cream/20 px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[3px] text-cream/80 transition-colors duration-300 hover:border-cream/40 hover:text-cream"
+              className="inline-flex items-center gap-2 border border-cream/40 px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[3px] text-cream transition-colors duration-300 hover:border-gold hover:text-gold"
             >
               Our Practice
             </a>
@@ -119,7 +119,7 @@ export default function HeroSection() {
         {/* ── Right: Lawyer rotation ── */}
         <div className="relative hidden pt-24 pb-12 lg:flex lg:flex-col lg:items-center lg:justify-center">
           {/* Eyebrow above photo card */}
-          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[5px] text-gold">
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[6px] text-gold">
             Meet Our Attorneys
           </p>
 
@@ -226,7 +226,7 @@ export default function HeroSection() {
       <div className="relative z-10 bg-cream-dark lg:hidden">
         {/* Eyebrow mobile */}
         <div className="px-8 pt-10 pb-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[5px] text-gold">
+          <p className="text-[13px] font-semibold uppercase tracking-[6px] text-gold">
             Meet Our Attorneys
           </p>
         </div>
