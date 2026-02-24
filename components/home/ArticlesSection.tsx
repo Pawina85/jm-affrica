@@ -98,7 +98,7 @@ export default function ArticlesSection() {
   const hasMore = filtered.length > INITIAL_COUNT;
 
   return (
-    <section ref={ref} className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="articles" className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-10">

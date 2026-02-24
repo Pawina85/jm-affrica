@@ -36,7 +36,7 @@ export default function TemplatesSection() {
   };
 
   return (
-    <section ref={ref} className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="templates" className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">

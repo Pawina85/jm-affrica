@@ -231,7 +231,7 @@ export default function CalculatorsSection() {
   };
 
   return (
-    <section ref={ref} className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="calculators" className="bg-cream px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-14 max-w-xl">

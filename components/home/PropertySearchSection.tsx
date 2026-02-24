@@ -42,7 +42,7 @@ export default function PropertySearchSection() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
+    <section ref={ref} id="search" className="bg-cream-dark px-8 py-24 sm:px-12 lg:py-32">
       <div className="mx-auto max-w-[1200px]">
         {/* ── Header ── */}
         <div className="mb-14 max-w-2xl">
