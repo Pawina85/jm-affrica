@@ -98,7 +98,7 @@ export default function TeamSection() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Photo */}
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src={lawyer.img}
                   alt={lawyer.name}
