@@ -4,6 +4,7 @@ import PracticeAreasSection from "@/components/home/PracticeAreasSection";
 import TemplatesSection from "@/components/home/TemplatesSection";
 import CalculatorsSection from "@/components/home/CalculatorsSection";
 import PropertySearchSection from "@/components/home/PropertySearchSection";
+import ArticlesSection from "@/components/home/ArticlesSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TemplatesSection />
       <CalculatorsSection />
       <PropertySearchSection />
+      <ArticlesSection />
     </>
   );
 }
